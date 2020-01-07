@@ -1,0 +1,23 @@
+
+
+/* coba design 2 */
+@font-face{
+  font-family: tulisan-nordic;
+  src: url('../src/assets/Norse-Bold.otf');
+}
+@font-face{
+  font-family: tulisan;
+  src: url('../src/assets/MavenPro-Regular.ttf');
+}
+
+*{
+  font-family: tulisan;
+}
+
+
+
+
+
+
+
+
