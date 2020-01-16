@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Footer extends Component {
     render() {
         return (
-            <div style={{color:'grey', paddingTop:100}} className='background-footer'>
+            <div style={{color:'grey'}} className='background-footer'>
                 <div className='d-flex flex-column'>
                     <div className='d-flex justify-content-center'>Dlehisme</div>
                     <div className='d-flex justify-content-around'>

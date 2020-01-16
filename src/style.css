@@ -14,14 +14,13 @@
 hr.garis{
   border-bottom: 1px solid #B3B3B3;
   margin-top: 5%;
-  width: 80%;
-
+  width: 95%;
 }
 
 /* Styling Header */
 .unlinks{
   text-decoration: none;
-  color: whitesmoke;
+  color: black;
 }
 .unlinks:hover{
   text-decoration: none;
@@ -29,6 +28,10 @@ hr.garis{
   border-left: 5px #3896D3 solid;
   background-color: white;
   filter: opacity(60%);
+}
+.bg-header{
+  background: #B3B3B3;
+  filter: opacity(50%);
 }
 
 /* Background Home Page One */
@@ -75,99 +78,153 @@ hr.garis{
 }
 
 /* Portofolio */
-.bg-portofolio{
-  background-color: #3896D3;
-  background-size: cover;
+.container-portofolio {
+  position: relative;
+  width: 100%;
 }
 .image-portofolio{
   display: block;
   width: 100%;
-  height: auto;
-}
-.team-thumb {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-}
-
-.team-thumb img{
-  width:100%;
-}
-
-.team-info {
-  background: #ffffff;
-  padding: 10px 30px 20px 30px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.team-info h3{
-  color: black;
-}
-
-.team-thumb .team-hover {
-  position: absolute;
-  background: #2A94D2;
-  width: 100%;
   height: 100%;
+}
+.overlay{
+  position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
-  text-align: center;
+  left: 14px;
+  right: -10px;
+  height: 100%;
+  width: 92%;
   opacity: 0;
-  transform: translateY(100%);
-  transition: 0.5s 0.2s;
+  transition: .5s ease;
+  background-color: black;
 }
-
-.team-thumb:hover .team-hover {
-  opacity: 0.95;
-  transition-delay: 0.3s;
-  transform: translateY(0);
+.container-portofolio:hover .overlay{
+  opacity: 0.7;
 }
-
-.team-thumb img {
-  transition: 0.5s 0.2s;
-}
-
-.team-thumb:hover img {
-  transform: scale(1.2);
-}
-
-.team-thumb .social-icon li a {
-  background: #292929;
-  border-radius: 100%;
-  color: #d9d9d9;
-  margin: 15px 5px 0 5px;
-}
-
-.team-thumb .team-item {
+.text-portofolio {
+  color: white;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
-.team-item {
-  color: #ffffff;
+
+/* TESTIMONI */
+.gambar-tengah{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+hr.garis-testi{
+  border-bottom: 1px solid #B3B3B3;
+  margin-top: -20%;
+  width: 95%;
 }
 
-.team-info p {
-  color: #bfbdbd;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
 
 /* FOOTER */
 .background-footer{
   background-color: black;
+  background-size: cover;
 }
 
+/* ==================================================================================================================================================================== */
+/* ABOUT PAGE */
+.bg-aboutPage{
+  background: url('./image/elwin.jpeg');
+  filter: grayscale(100%)  ;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.lines{
+  border-left: 1px black solid;
+}
+.contents{
+  position: relative;
+  left: -50px;
+}
+.circle{
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 3px 4px grey;
+  text-decoration: none;
+  display: inline-block;
+}
+.bg-testimoni{
+  background: grey;
+  width: 100%;
+  background-size: cover;
+}
+.img-testimoni{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: #3896D3 5px solid;
+}
+/* PORTOFOLIO PAGE */
+.bg-portofolio{
+  background: url('./image/bg-portofolio.jpg');
+  background-size: cover;
+  height: 50vh;
+}
+.text-on-bg{
+  padding-top: 15%;
+  margin-bottom: -3%;
+  color: white;
+  font-weight: 1000;
+  font-size: 50px;
+  text-shadow: black 2px 2px;
 
+}
+.text-project{
+  font-size: 100px;
+  font-weight: 900;
+  color: black;
+  text-shadow: white 5px 5px;
+}
 
+/* DETAIL PORTOFOLIO */
+.bg-detail-porto{
+  background: url('./image/detail-porto.jpg');
+  background-size: cover;
+  height: 55vh;
+}
+.text-project-detail{
+  padding-top: 20%;
+  font-size: 100px;
+  font-weight: 900;
+  color: white;
+  text-shadow: grey 2px 2px;
+}
+
+/* BLOG */
+.bg-blog{
+  background: url('./image/blog.jpg');
+  background-size: cover;
+  height: 90vh;
+  margin-top: -20%;
+}
+.text-blog{
+  padding-top: 40%;
+  font-size: 100px;
+  font-weight: 900;
+  color: white;
+  text-shadow: black 2px 2px;
+}
+.text-blog-h5{
+  letter-spacing: 5px;
+  margin-top: -20px;
+  font-weight: 200;
+  font-style: italic;
+}

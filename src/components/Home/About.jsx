@@ -10,12 +10,12 @@ import react from '../../image/skills/react.png'
 
 const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
 
-export class About extends Component {
+ class About extends Component {
     renderlogo=()=>{
         let logo = logo_skills.map((val)=>{
+            console.log(val)
             return(
-                <img key={val} className="col-lg-1 mx-auto col-md-4 my-auto img-costumer-filter" src={val} alt="logo val"/>
-                
+                <img  className=" my-auto img-costumer-filter" style={{width:'8%'}} src={val} alt="logo val"/>
             )
         })
         return logo
@@ -30,20 +30,28 @@ export class About extends Component {
                         <h2 className='text-center'>A Brief Introduction</h2>
                     </div>
                     <div className='col-lg-2'></div>
-                        <div className='col-lg-8 mt-4' style={{textAlign:'center'}}>a hard-worker Management graduate with 3,74 GPA score, problem solving, innovative, and ciritical thinking minded about business development, have much exeperience about leadership, team work, and organizational. For me, team work is an art to achieve a common goals. My life motto is “Incipit Vita Nova” taken from Deutch language, has meaning from now on my life will be better.</div>  
+                        <div className='col-lg-8 mt-4' style={{textAlign:'center'}}>
+                            <h6>
+                            a hard-worker Management graduate with 3,74 GPA score, problem solving, innovative, and ciritical thinking minded about business development, have much exeperience about leadership, team work, and organizational. For me, team work is an art to achieve a common goals. My life motto is “Incipit Vita Nova” taken from Deutch language, has meaning from now on my life will be better.
+                            </h6>
+                            </div>  
                     <div className='col-lg-2'></div>
                         <hr className='garis'/>
 
-                    <div className='container'>
-                        <div className='col-lg-12'>
-                            <div style={{backgroundColor:'white'}}>
-                            <h2 className='text-center'>Programming Skills</h2>
-                                <div className="d-flex flex-row justify-content-around flex-wrap">
-                                    {this.renderlogo()}
-                                </div>
-                            </div>
-                        </div>
+                    <div className='col-lg-12 my-3'>
+                        <h2 className='text-center'>Programming Skills</h2>
                     </div>
+                    <div className='col-lg-2'></div>
+                        <div className='col-lg-8 mt-4' style={{textAlign:'center'}}>
+                            <h6>
+                                a hard-worker Management graduate with 3,74 GPA score, problem solving, innovative, and ciritical thinking minded about business development, have much exeperience about leadership, tea
+                            </h6>
+                        </div>  
+                    <div className='col-lg-2'></div>
+                    <div className="d-flex justify-content-around flex-wrap mt-5 col-lg-12">
+                                {this.renderlogo()}
+                    </div>
+                        <hr className='garis'/>
 
                 </div>
             </div>
