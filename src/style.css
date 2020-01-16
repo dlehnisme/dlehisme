@@ -127,14 +127,43 @@ hr.garis-testi{
   margin-top: -20%;
   width: 95%;
 }
+/* BLOG */
+.bg-blog-home{
+  background: url('./image/blog.jpg');
+  background-size: cover;
+  background-position: center center;
+  max-width: 100%;
+  height: 45vh;
+}
+.container-blog{
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
 
+}
+.img-blog{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.div-sizing{
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 60%;
+  left: -5%;
+  background: grey;
+  filter: drop-shadow(7px 7px black);
+  overflow: hidden;
+}
+.card-footer{
+  border: 0px;
+}
 
 /* FOOTER */
 .background-footer{
   background-color: black;
-  background-size: cover;
 }
-
 /* ==================================================================================================================================================================== */
 /* ABOUT PAGE */
 .bg-aboutPage{
@@ -171,6 +200,15 @@ hr.garis-testi{
   height: 200px;
   border-radius: 100%;
   border: #3896D3 5px solid;
+}
+.img-much{
+  height: 110px;
+  width: 110px;
+  box-shadow: 4px 2px grey;
+  transition: ease-in 0.1s;
+}
+.img-much:hover{
+  transform: scale(120%);
 }
 /* PORTOFOLIO PAGE */
 .bg-portofolio{

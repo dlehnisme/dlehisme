@@ -44,6 +44,7 @@ export class Portofolio extends Component {
                             </h5>  
                         </button>
                         <div className='col-lg-4'></div>
+                        <hr className='garis'/>
 
                 </div>
             </div>

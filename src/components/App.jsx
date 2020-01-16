@@ -11,6 +11,7 @@ import AboutPage from './Page/AboutPage'
 import PortofolioPage from './Page/PortofolioPage'
 import DetailPortofolio from './Page/DetailPortofolio'
 import Blog from './Page/Blog'
+import BlogHome from './Home/BlogHome'
 
 
 export class App extends Component {
@@ -23,6 +24,7 @@ export class App extends Component {
                     <Route exact path='/'  component={About}/>
                     <Route exact path='/'  component={Testimoni}/>
                     <Route exact path='/'  component={Portofolio}/>
+                    <Route exact path='/'  component={BlogHome}/>
                     <Route path='/about'  component={AboutPage}/>
                     <Route path='/portofolio'  component={PortofolioPage}/>
                     <Route path='/portofolio-detail'  component={DetailPortofolio}/>

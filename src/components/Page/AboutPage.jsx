@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
-import foto from '../../image/elwin.jpeg'
 
+import foto1 from '../../image/about-page/1.JPG'
+import foto2 from '../../image/about-page/2.JPG'
+import foto3 from '../../image/about-page/3.JPG'
+import foto4 from '../../image/about-page/4.JPG'
+import foto5 from '../../image/about-page/5.JPG'
+import foto6 from '../../image/about-page/6.JPG'
+import foto7 from '../../image/about-page/7.JPG'
+import foto8 from '../../image/about-page/8.JPG'
+import elwin from '../../image/elabout.JPG'
 export class AboutPage extends Component {
     render() {
+        var foto = [foto1,foto2,foto3,foto4,foto5,foto6,foto7,foto8]
         return (
             <div style={{background:'whitesmoke'}}>
                 <div className='container-fluid'>
@@ -15,6 +24,14 @@ export class AboutPage extends Component {
                         <div className='col-lg-6 mt-5 pt-5 col-md-12' >
                             <h1>Hello, my name is Elwin Johan Sibarani</h1>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia adipisci, expedita vel consequatur harum eos minima iure inventore obcaecati?</h5>
+
+                            {foto.map((val)=>{
+                                return(
+                                <img className='img-much rounded my-1 mx-1' src={val} alt=""/>
+                                    
+                                )
+                            })}
+
                         </div>
 
                         <div className=' col-lg-12'>
@@ -70,17 +87,17 @@ export class AboutPage extends Component {
                                     </div>
                                     <div className='col-lg-4'>
                                         <center>
-                                        <img className='img-testimoni' src={foto} alt="foto_elwin"/>
+                                        <img className='img-testimoni' src={elwin} alt="foto_elwin"/>
                                         </center>
                                     </div>
                                     <div className='col-lg-4'>
                                         <form action="">
                                             Name : <br/>
-                                            <input className='form-control' type="text"/><br/>
+                                            <input placeholder='Your Name ...' className='form-control' type="text"/><br/>
                                             Your Job : <br/>
-                                            <input className='form-control' type="text"/><br/>
+                                            <input placeholder='Your job / activity' className='form-control' type="text"/><br/>
                                             Your Relathionship With Elwin
-                                            <input className='form-control' type="text"/>
+                                            <input placeholder='Who is Elwin ?' className='form-control' type="text"/>
                                         </form>
                                     </div>
                                     <div className='col-lg-4'>
