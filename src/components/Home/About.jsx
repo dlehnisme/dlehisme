@@ -13,7 +13,6 @@ const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
  class About extends Component {
     renderlogo=()=>{
         let logo = logo_skills.map((val)=>{
-            console.log(val)
             return(
                 <img  className=" my-auto img-costumer-filter" style={{width:'8%'}} src={val} alt="logo val"/>
             )

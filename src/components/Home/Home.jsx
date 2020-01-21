@@ -7,21 +7,16 @@ export class Home extends Component {
             <div className='bg-home'>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <div className='col-lg-12'>
-                            <center>
-                                <h1 className='nordic-font'>dlehisme</h1>
-                                <h5 className='typewriter'>
-                                <Typewriter
-                                options ={{
-                                    strings: ['Fullstack Developer', 'Management Bachelor Degree', 'React Native', 'MongoDB', 'MySQL', 'PHP', 'Codeigniter'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
-                                </h5>
-                                <button className='btn btn-outline-light' style={{width:'200px',height:'70px',fontSize:'25px'}}>Contact Me</button>
-                            </center>
+                        <div className='col-lg-6'>
+                            <h5 className='hello'>
+                                HELLO , THIS IS ELWIN JOHAN SIBARANI
+                            </h5>
+                            <h1 className='who-ami mt-3'>
+                                Management Bachelor Degree Fullstack Developer
+                            </h1>
+                            <button className='btn btn-info mt-5 btn-big'>See Portofolio</button>
                         </div>
+                        <div className='col-lg-6 font-weight-bold'></div>
                     </div>
                 </div>
             </div>

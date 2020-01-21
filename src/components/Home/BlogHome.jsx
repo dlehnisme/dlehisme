@@ -12,7 +12,7 @@ export class BlogHome extends Component {
                     <div className='col-lg-2'></div>
                     <div className='col-lg-8'>
                         <div className='container-blog'>
-                            <img className='img-blog' src={foto} alt=""/>
+                            <img className='img-blog rounded' src={foto} alt=""/>
                             <div className='card div-sizing'>
                                 <div className='card-body overflow-hidden'>
                                     <h3>What is Dlehisme?</h3>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import foto from '../../image/elwin.jpeg'
 import {Link} from 'react-router-dom'
+import gaskuy from '../../image/Portofolio/gaskuy.jpg'
+import yutaka from '../../image/Portofolio/yutaka.jpg'
+import dlehisme from '../../image/Portofolio/dlehisme.jpg'
 
 
 export class PortofolioPage extends Component {
@@ -23,7 +26,7 @@ export class PortofolioPage extends Component {
 
                         <div className='col-lg-4 my-5'>
                             <div className='container-portofolio'>
-                                <img className='image-portofolio rounded' src={foto} alt=""/>
+                                <img className='image-portofolio rounded' src={gaskuy} alt=""/>
                                 <div className='overlay'>
                                     <h6 className='text-portofolio font-italic pb-5'>Web app</h6>
                                     <h6 className='text-portofolio'>Gaskuy.id</h6>
@@ -35,7 +38,7 @@ export class PortofolioPage extends Component {
                         </div>
                         <div className='col-lg-4 my-5'>
                             <div className='container-portofolio'>
-                                <img className='image-portofolio rounded' src={foto} alt=""/>
+                                <img className='image-portofolio rounded' src={yutaka} alt=""/>
                                 <div className='overlay'>
                                     <h6 className='text-portofolio font-italic pb-5'>Web app</h6>
                                     <h6 className='text-portofolio'>Gaskuy.id</h6>
@@ -45,7 +48,7 @@ export class PortofolioPage extends Component {
                         </div>
                         <div className='col-lg-4 my-5'>
                             <div className='container-portofolio'>
-                                <img className='image-portofolio rounded' src={foto} alt=""/>
+                                <img className='image-portofolio rounded' src={dlehisme} alt=""/>
                                 <div className='overlay'>
                                     <h6 className='text-portofolio font-italic pb-5'>Web app</h6>
                                     <h6 className='text-portofolio'>Gaskuy.id</h6>

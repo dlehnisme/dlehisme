@@ -18,59 +18,30 @@ hr.garis{
 }
 
 /* Styling Header */
-.unlinks{
-  text-decoration: none;
-  color: black;
-}
-.unlinks:hover{
-  text-decoration: none;
-  color: black;
-  border-left: 5px #3896D3 solid;
-  background-color: white;
-  filter: opacity(60%);
-}
-.bg-header{
-  background: #B3B3B3;
-  filter: opacity(50%);
-}
+
 
 /* Background Home Page One */
 .bg-home{
   background-image: url('./image/lombok.jpg');
   background-size: cover;
   height: 100vh;
+  background-position: center center;
 }
-.nordic-font{
-  font-family: tulisan-nordic;
-  font-size: 13vw;
-  letter-spacing: 30px;
+.hello{
   color: white;
-  margin-top: 15%;
+  letter-spacing: 5px;
+  margin-top: 40%;
+  font-weight: 800;
 }
-.nordic-font::after{
-  content: '';
-  border-right: #3896D3 10px solid;
-  filter: drop-shadow(8px 8px 10px black);
+.who-ami{
+  font-weight: 1000;
+}
+.btn-big{
+  width: 200px;
+  height: 50px;
+}
 
 
-}
-.typewriter{
-  color: white;
-  margin-top: -3%;
-  font-size: 30px;
-  letter-spacing: 10px;
-  text-shadow: 1px 1px whitesmoke;
-  margin-bottom: 5%;
-  /* filter: drop-shadow(8px 8px 10px #3896D3); */
-}
-.text-under-dlehisme{
-  position: absolute;
-  top: 400px;
-  color: white;
-}
-.font-small{
-  font-size: 15px;
-}
 /* About Home */
 .img-costumer-filter{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -138,27 +109,32 @@ hr.garis-testi{
 .container-blog{
   position: relative;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 130px;
 
 }
 .img-blog{
   display: block;
   width: 100%;
   height: 100%;
+  filter: drop-shadow(5px 5px grey);
 }
 .div-sizing{
   width: 60%;
   height: 50%;
   position: absolute;
-  top: 60%;
+  top: 58%;
   left: -5%;
-  background: grey;
+  background: white;
   filter: drop-shadow(7px 7px black);
   overflow: hidden;
+  border: none;
 }
 .card-footer{
   border: 0px;
+  background: white;
 }
+
+
 
 /* FOOTER */
 .background-footer{
@@ -166,14 +142,19 @@ hr.garis-testi{
 }
 /* ==================================================================================================================================================================== */
 /* ABOUT PAGE */
-.bg-aboutPage{
-  background: url('./image/elwin.jpeg');
-  filter: grayscale(100%)  ;
+.bg-about{
+  background: url('./image/bg/bg.png');
   background-size: cover;
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
   background-position: center center;
+  opacity: 100;
+  width: 100%;
+  padding-top: 40px;
+}
+.img-elwinTop{
+  width: 200px;
+  border: 1px solid #3896D3;
+  border-radius: 50%;
+  filter: grayscale(100%) ;
 }
 .lines{
   border-left: 1px black solid;
@@ -186,6 +167,7 @@ hr.garis-testi{
   border-radius: 100%;
   width: 70px;
   height: 70px;
+  margin: auto;
   box-shadow: 3px 4px grey;
   text-decoration: none;
   display: inline-block;
@@ -214,7 +196,7 @@ hr.garis-testi{
 .bg-portofolio{
   background: url('./image/bg-portofolio.jpg');
   background-size: cover;
-  height: 50vh;
+  /* height: 50vh; */
 }
 .text-on-bg{
   padding-top: 15%;
@@ -236,7 +218,7 @@ hr.garis-testi{
 .bg-detail-porto{
   background: url('./image/detail-porto.jpg');
   background-size: cover;
-  height: 55vh;
+  /* height: 55vh; */
 }
 .text-project-detail{
   padding-top: 20%;
@@ -250,7 +232,7 @@ hr.garis-testi{
 .bg-blog{
   background: url('./image/blog.jpg');
   background-size: cover;
-  height: 90vh;
+  /* height: 90vh; */
   margin-top: -20%;
 }
 .text-blog{
