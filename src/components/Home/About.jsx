@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import  Fade from 'react-reveal/Fade'
+
 // Picture Import
 import javascript from  '../../image/skills/javascript.png'
 import html from '../../image/skills/html.png'
@@ -14,7 +16,9 @@ const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
     renderlogo=()=>{
         let logo = logo_skills.map((val)=>{
             return(
-                <img  className=" my-auto img-costumer-filter" style={{width:'8%'}} src={val} alt="logo val"/>
+                <Fade right delay={500}>
+                    <img  className=" my-auto img-costumer-filter" style={{width:'8%'}} src={val} alt="logo val"/>
+                </Fade>
             )
         })
         return logo

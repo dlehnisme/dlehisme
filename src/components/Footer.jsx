@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+
 
 export class Footer extends Component {
     render() {
@@ -10,23 +12,37 @@ export class Footer extends Component {
                         <h4></h4>
                         <h4></h4>
                         <h4></h4>
+                        <Link className='icon-decoration' to='/'>
                         <h4>Home</h4>
+                        </Link>
+                        <Link className='icon-decoration' to='about'>
                         <h4>About</h4>
+                        </Link>
+                        <Link className='icon-decoration' to='/portofolio'>
                         <h4>Portofolio</h4>
+                        </Link>
+                        <Link className='icon-decoration' to='/blog'>
                         <h4>Blog</h4>
+                        </Link>
                         <h4></h4>
                         <h4></h4>
                         <h4></h4>
                     </div>
                     <div className='d-flex justify-content-center'>
                         <div style={{color:'grey'}}>
+                            <a className='icon-decoration' href="https://www.instagram.com/johanellsibarani/">
                             <i class="fab fa-instagram fa-5x"></i>
+                            </a>
                         </div>
                         <div style={{color:'grey'}}>
+                            <a className='icon-decoration' href="https://github.com/dlehnisme">
                             <i class="fab fa-github fa-5x"></i>
+                            </a>
                         </div>
                         <div style={{color:'grey'}}>
+                            <a className='icon-decoration' href="https://www.linkedin.com/in/johanelsibarani/">
                             <i class="fab fa-linkedin fa-5x"></i>
+                            </a>
                         </div>
                     </div>
                     <div className='d-flex justify-content-center'>

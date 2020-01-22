@@ -16,6 +16,11 @@ hr.garis{
   margin-top: 5%;
   width: 95%;
 }
+hr.garis-testi{
+  border-bottom: 1px solid #B3B3B3;
+  margin-top: -15%;
+  width: 95%;
+}
 
 /* Styling Header */
 
@@ -28,7 +33,8 @@ hr.garis{
   background-position: center center;
 }
 .hello{
-  color: white;
+  color: #3896D3;
+  text-shadow: black 1px 1px;
   letter-spacing: 5px;
   margin-top: 40%;
   font-weight: 800;
@@ -56,14 +62,14 @@ hr.garis{
 .image-portofolio{
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .overlay{
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 14px;
-  right: -10px;
+  bottom: auto;
+  left: auto;
+  right: auto;
   height: 100%;
   width: 92%;
   opacity: 0;
@@ -93,11 +99,10 @@ hr.garis{
   height: 100px;
   border-radius: 100%;
 }
-hr.garis-testi{
-  border-bottom: 1px solid #B3B3B3;
-  margin-top: -20%;
-  width: 95%;
+.btn-margin-minus{
+  margin-top: -50%;
 }
+
 /* BLOG */
 .bg-blog-home{
   background: url('./image/blog.jpg');
@@ -139,6 +144,10 @@ hr.garis-testi{
 /* FOOTER */
 .background-footer{
   background-color: black;
+}
+.icon-decoration{
+  text-decoration: none;
+  color: grey;
 }
 /* ==================================================================================================================================================================== */
 /* ABOUT PAGE */
@@ -192,6 +201,8 @@ hr.garis-testi{
 .img-much:hover{
   transform: scale(120%);
 }
+
+
 /* PORTOFOLIO PAGE */
 .bg-portofolio{
   background: url('./image/bg-portofolio.jpg');

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../style.css'
+import { Fade } from 'reactstrap'
+
 import Header from './Header'
 import { Route, BrowserRouter } from 'react-router-dom'
 import Footer from './Footer'
@@ -20,16 +22,18 @@ export class App extends Component {
             <div>
                 <BrowserRouter>
                     <Header/>
-                    <Route exact path='/' exact component={Home}/>
-                    <Route exact path='/'  component={About}/>
-                    <Route exact path='/'  component={Testimoni}/>
-                    <Route exact path='/'  component={Portofolio}/>
-                    <Route exact path='/'  component={BlogHome}/>
-                    <Route path='/about'  component={AboutPage}/>
-                    <Route path='/portofolio'  component={PortofolioPage}/>
-                    <Route path='/portofolio-detail'  component={DetailPortofolio}/>
-                    <Route path='/blog'  component={Blog}/>
-                    <Footer/>
+                    <Fade>
+                        <Route exact path='/' exact component={Home}/>
+                        <Route exact path='/'  component={About}/>
+                        <Route exact path='/'  component={Testimoni}/>
+                        <Route exact path='/'  component={Portofolio}/>
+                        <Route exact path='/'  component={BlogHome}/>
+                        <Route path='/about'  component={AboutPage}/>
+                        <Route path='/portofolio'  component={PortofolioPage}/>
+                        <Route path='/portofolio-detail'  component={DetailPortofolio}/>
+                        <Route path='/blog'  component={Blog}/>
+                        <Footer/>
+                    </Fade>
                 </BrowserRouter>
             </div>
         )
