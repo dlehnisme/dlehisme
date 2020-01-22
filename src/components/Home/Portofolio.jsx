@@ -51,13 +51,8 @@ export class Portofolio extends Component {
                     </Fade>
 
                         <div className='col-lg-4'></div>
-                        <button className='col-lg-4 col-md-12 mx-auto btn btn-block btn-light my-5' style={{width:'300px',height:'70px',fontSize:'25px',border:'1px black solid'}}>
-                            <h5>
-                                View More Portofolio
-                            </h5>  
-                        </button>
+                        
                         <div className='col-lg-4'></div>
-                        <hr className='garis'/>
 
                 </div>
             </div>

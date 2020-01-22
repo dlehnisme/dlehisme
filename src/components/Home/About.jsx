@@ -26,7 +26,7 @@ const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
 
     render() {
         return (
-            <div className='my-5 container' >
+            <div className='mt-5 container' >
                 <div className='row'>
 
                     <div className='col-lg-12'>

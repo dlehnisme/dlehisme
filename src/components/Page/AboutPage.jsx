@@ -1,23 +1,42 @@
 import React, { Component } from 'react'
 import axios from '../../config/axios'
 import {Spinner} from 'reactstrap'
+import  Fade from 'react-reveal/Fade'
+
 
 
 import elwinTop from '../../image/elwin-kotak.jpeg'
 import elwin from '../../image/elabout.JPG'
 export class AboutPage extends Component {
     state={
-        journey : null
+        journey : null,
+        filterJourney : null
     }
     componentDidMount(){
+        var journeys = this.props.location.search.split('filter=')[1]
+        console.log(journeys)
+
         axios.get('journey')
         .then((res)=>{
-            this.setState({journey : res.data})
+            if(journeys !== 'all'){
+                var hasil = res.data.filter((val)=>{
+                    return val.category == journeys
+                })
+            }
+            this.setState({journey : res.data, filterJourney : hasil ? hasil : res.data})
             // console.log(this.state.journey)
         })
         .catch((err)=>{
             console.log(err)
         })
+    }
+    filterJourney = () =>{
+        let journey = this.filter.value
+        console.log(journey)
+        var hasilFilter = this.state.journey.filter((val)=>{
+            return val.category == journey 
+        })
+        this.setState({filterJourney : hasilFilter})
     }
 
     onSubmitTestimoni = () =>{
@@ -42,8 +61,23 @@ export class AboutPage extends Component {
         this.desc.value = ''
     }
     renderJourney = () =>{
-        var showJourney = this.state.journey.map((item)=>{
+        if(this.state.journey === null || this.state.filterJourney === null){
             return(
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <center>
+                                <Spinner type='grow' color='primary' size='xl' />
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        console.log(this.state.filterJourney)
+        var showJourney = this.state.filterJourney.map((item)=>{
+            return(
+            <Fade left delay={2000}>
                 <div className='container'>
 
                 <div className='row'>
@@ -64,6 +98,7 @@ export class AboutPage extends Component {
                         </div>
                 </div>
                 </div>
+            </Fade>
             )
         })
         return showJourney
@@ -71,33 +106,23 @@ export class AboutPage extends Component {
 
 
     render() {
-        if(this.state.journey === null){
-            return(
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <center>
-                                <Spinner type='grow' color='primary' size='xl' />
-                            </center>
-                        </div>
-                    </div>
-                </div>
-            )
-        }
+        
         return (
             <div style={{background:'whitesmoke'}}>
                 <div className='container-fluid'>
                     <div className='row'>
 
-                    <div className='bg-about'>
-                        <div className='col-lg-12 col-md-12'>
-                            <center>
-                                <img className='img-elwinTop' src={elwinTop} alt="elwin"/>
-                                <h6 className='w-50 font-weight-bold my-3'>Hello My Name Is Elwin Johan Sibarani</h6>
-                                <h6 className='w-75'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, harum odit. Voluptas dolorem doloribus consequuntur dolores quaerat odio incidunt reiciendis.</h6>
-                            </center>
+                    <Fade delay={500}>
+                        <div className='bg-about'>
+                            <div className='col-lg-12 col-md-12'>
+                                <center>
+                                    <img className='img-elwinTop' src={elwinTop} alt="elwin"/>
+                                    <h6 className='w-50 font-weight-bold my-3'>Hello My Name Is Elwin Johan Sibarani</h6>
+                                    <h6 className='w-75'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, harum odit. Voluptas dolorem doloribus consequuntur dolores quaerat odio incidunt reiciendis.</h6>
+                                </center>
+                            </div>
                         </div>
-                    </div>
+                    </Fade>
 
                         <div className=' col-lg-12'>
                         <div className='col-lg-12 mt-5'>
@@ -106,10 +131,11 @@ export class AboutPage extends Component {
                                     Life Journey
                                 </h2>
                                 <h5> What do you want to know?</h5>
-                                <select className='form-control col-lg-4'>
-                                    <option value="">Study</option>
-                                    <option value="">Life</option>
-                                    <option value="">Organiztion</option>
+                                <select onChange={this.filterJourney} ref={(input)=>{this.filter = input}} className='form-control col-lg-4'>
+                                    <option value="">Select The Journey</option>
+                                    <option value="1">All</option>
+                                    <option value="2">Study</option>
+                                    <option value="3">Organiztion</option>
                                 </select>
                             </center>
                         </div>
