@@ -67,14 +67,17 @@ hr.garis-testi{
 .overlay{
   position: absolute;
   top: 0;
-  bottom: auto;
-  left: auto;
-  right: auto;
-  height: 100%;
-  width: 92%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* height: 100%;
+  max-width: 100%; */
   opacity: 0;
   transition: .5s ease;
   background-color: black;
+  margin-right: 13px;
+  margin-left: 13px;
+  /* box-sizing: border-box; */
 }
 .container-portofolio:hover .overlay{
   opacity: 0.7;
@@ -229,6 +232,7 @@ hr.garis-testi{
 .bg-detail-porto{
   background: url('./image/detail-porto.jpg');
   background-size: cover;
+  max-width: 100%;
   /* height: 55vh; */
 }
 .text-project-detail{
@@ -237,6 +241,14 @@ hr.garis-testi{
   font-weight: 900;
   color: white;
   text-shadow: grey 2px 2px;
+}
+.box-tech{
+  border: 1px solid #3896D3;
+  border-radius: 5%;
+  padding: 10px;
+  background: #3896D3;
+  font-weight:900 ;
+  color: aliceblue;
 }
 
 /* BLOG */

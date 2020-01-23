@@ -10,7 +10,6 @@ import About from './Home/About'
 import Portofolio from './Home/Portofolio'
 import Testimoni from './Home/Testimoni'
 import AboutPage from './Page/AboutPage'
-import PortofolioPage from './Page/PortofolioPage'
 import DetailPortofolio from './Page/DetailPortofolio'
 
 
@@ -26,8 +25,7 @@ export class App extends Component {
                         <Route exact path='/'  component={Testimoni}/>
                         <Route exact path='/'  component={Portofolio}/>
                         <Route path='/about'  component={AboutPage}/>
-                        <Route path='/portofolio'  component={PortofolioPage}/>
-                        <Route path='/portofolio-detail'  component={DetailPortofolio}/>
+                        <Route path='/portofolio/detail/:nama'  component={DetailPortofolio}/>
                         <Footer/>
                     </Fade>
                 </BrowserRouter>

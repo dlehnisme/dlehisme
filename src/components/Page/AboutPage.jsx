@@ -14,7 +14,7 @@ export class AboutPage extends Component {
     }
     componentDidMount(){
         var journeys = this.props.location.search.split('filter=')[1]
-        console.log(journeys)
+        // console.log(journeys)
 
         axios.get('journey')
         .then((res)=>{
@@ -32,8 +32,11 @@ export class AboutPage extends Component {
     }
     filterJourney = () =>{
         let journey = this.filter.value
-        console.log(journey)
+        // console.log(journey)
         var hasilFilter = this.state.journey.filter((val)=>{
+            if(journey == 1){
+                return val
+            }
             return val.category == journey 
         })
         this.setState({filterJourney : hasilFilter})
@@ -74,7 +77,7 @@ export class AboutPage extends Component {
                 </div>
             )
         }
-        console.log(this.state.filterJourney)
+        // console.log(this.state.filterJourney)
         var showJourney = this.state.filterJourney.map((item)=>{
             return(
             <Fade left delay={2000}>

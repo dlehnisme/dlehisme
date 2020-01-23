@@ -15,15 +15,10 @@ export class Footer extends Component {
                         <Link className='icon-decoration' to='/'>
                         <h4>Home</h4>
                         </Link>
-                        <Link className='icon-decoration' to='about'>
+                        <Link className='icon-decoration' to='about?filter=all'>
                         <h4>About</h4>
                         </Link>
-                        <Link className='icon-decoration' to='/portofolio'>
-                        <h4>Portofolio</h4>
-                        </Link>
-                        <Link className='icon-decoration' to='/blog'>
-                        <h4>Blog</h4>
-                        </Link>
+
                         <h4></h4>
                         <h4></h4>
                         <h4></h4>

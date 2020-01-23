@@ -61,8 +61,8 @@ export class Testimoni extends Component {
                     <div className='col-lg-2'></div>
                     <div className='col-lg-12'>
                         <center>
-                            <Link to='/about'>
-                                <button className='btn btn-outline-info btn-margin-minus btn-big'>About Me</button>
+                            <Link to='/about?filter=all'>
+                                <button className='btn btn-info btn-margin-minus btn-big'>About Me</button>
                             </Link>
                         </center>
                     <hr className='garis-testi'/>
