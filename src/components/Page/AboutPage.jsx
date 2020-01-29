@@ -32,11 +32,12 @@ export class AboutPage extends Component {
     }
     filterJourney = () =>{
         let journey = this.filter.value
-        // console.log(journey)
+        // console.log(this.state.journey)
         var hasilFilter = this.state.journey.filter((val)=>{
-            if(journey == 1){
+            if(journey === 1){
                 return val
             }
+            // console.log(hasilFilter)
             return val.category == journey 
         })
         this.setState({filterJourney : hasilFilter})
@@ -80,7 +81,7 @@ export class AboutPage extends Component {
         // console.log(this.state.filterJourney)
         var showJourney = this.state.filterJourney.map((item)=>{
             return(
-            <Fade left delay={2000}>
+            <Fade left delay={1000}>
                 <div className='container'>
 
                 <div className='row'>
@@ -97,7 +98,7 @@ export class AboutPage extends Component {
                         </div>
 
                         <div className='col-lg-5 col-md-12 mt-4'>
-                            <h5> {item.desc_moment} </h5>
+                            <h6> {item.desc_moment} </h6>
                         </div>
                 </div>
                 </div>
@@ -121,7 +122,7 @@ export class AboutPage extends Component {
                                 <center>
                                     <img className='img-elwinTop' src={elwinTop} alt="elwin"/>
                                     <h6 className='w-50 font-weight-bold my-3'>Hello My Name Is Elwin Johan Sibarani</h6>
-                                    <h6 className='w-75'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, harum odit. Voluptas dolorem doloribus consequuntur dolores quaerat odio incidunt reiciendis.</h6>
+                                    <h6 className='w-75'>a hard-worker Management Bachelor Degree and Full-stack Developer with problem solving,innovative,and critical thinking minded. For me, team work is an art to achieve a common goals. My life motto is “Incipit Vita Nova” taken from Deutch language, has meaning from now on my life will be better.</h6>
                                 </center>
                             </div>
                         </div>
@@ -133,12 +134,12 @@ export class AboutPage extends Component {
                                 <h2 className='text-center'>
                                     Life Journey
                                 </h2>
-                                <h5> What do you want to know?</h5>
+                                <h5> What you want to know?</h5>
                                 <select onChange={this.filterJourney} ref={(input)=>{this.filter = input}} className='form-control col-lg-4'>
                                     <option value="">Select The Journey</option>
                                     <option value="1">All</option>
                                     <option value="2">Study</option>
-                                    <option value="3">Organiztion</option>
+                                    <option value="3">Organization</option>
                                 </select>
                             </center>
                         </div>

@@ -14,10 +14,12 @@ const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
 
  class About extends Component {
     renderlogo=()=>{
+        let i = 0
         let logo = logo_skills.map((val)=>{
+            i++
             return(
-                <Fade right delay={500}>
-                    <img  className=" my-auto img-costumer-filter" style={{width:'8%'}} src={val} alt="logo val"/>
+                <Fade key={i} right delay={500}>
+                    <img  className="img-costumer-filter m-auto" style={{width:'8%'}} src={val} alt="logo val"/>
                 </Fade>
             )
         })
@@ -47,7 +49,7 @@ const logo_skills = [javascript,html,css,mongodb,mysql,nodejs,react]
                     <div className='col-lg-2'></div>
                         <div className='col-lg-8 mt-4' style={{textAlign:'center'}}>
                             <h6>
-                                a hard-worker Management graduate with 3,74 GPA score, problem solving, innovative, and ciritical thinking minded about business development, have much exeperience about leadership, tea
+                            After graduated from UPN ‘Veteran’ Yogyakarta in March 2019, I joined Purwadhika focusing in Web and Mobile Development I enjoy to develop website and mobile app. I write both front end and back end code. 
                             </h6>
                         </div>  
                     <div className='col-lg-2'></div>

@@ -7,7 +7,7 @@ export class Footer extends Component {
         return (
             <div style={{color:'grey'}} className='background-footer'>
                 <div className='d-flex flex-column'>
-                    <div className='d-flex justify-content-center'>Dlehisme</div>
+                    <div className='d-flex justify-content-center'>johanelsibarani.com</div>
                     <div className='d-flex justify-content-around'>
                         <h4></h4>
                         <h4></h4>
@@ -26,17 +26,17 @@ export class Footer extends Component {
                     <div className='d-flex justify-content-center'>
                         <div style={{color:'grey'}}>
                             <a className='icon-decoration' href="https://www.instagram.com/johanellsibarani/">
-                            <i class="fab fa-instagram fa-5x"></i>
+                            <i className="fab fa-instagram fa-5x"></i>
                             </a>
                         </div>
                         <div style={{color:'grey'}}>
                             <a className='icon-decoration' href="https://github.com/dlehnisme">
-                            <i class="fab fa-github fa-5x"></i>
+                            <i className="fab fa-github fa-5x"></i>
                             </a>
                         </div>
                         <div style={{color:'grey'}}>
                             <a className='icon-decoration' href="https://www.linkedin.com/in/johanelsibarani/">
-                            <i class="fab fa-linkedin fa-5x"></i>
+                            <i className="fab fa-linkedin fa-5x"></i>
                             </a>
                         </div>
                     </div>

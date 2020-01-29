@@ -1,4 +1,4 @@
 
-var src = 'http://localhost:1403/public/FotoProject/'
+var src = 'https://api.johanelsibarani.com/public/FotoProject/'
 
 export default src

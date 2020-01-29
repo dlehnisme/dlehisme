@@ -23,7 +23,7 @@ export class Portofolio extends Component {
     renderProject = () =>{
         let projectMap = this.state.project.map((item)=>{
         return(
-            <Fade right>
+            <Fade key={item.id} right>
             <div className='col-lg-4 container-portofolio'>
                 <img className='image-portofolio rounded' src={source +item.foto_home} alt={item.jenis_apk}/>
                 <div className='overlay rounded'>

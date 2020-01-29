@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import '../style.css'
 import { Fade } from 'reactstrap'
 
-import Header from './Header'
 import { Route, BrowserRouter } from 'react-router-dom'
 import Footer from './Footer'
 import Home from './Home/Home'
@@ -18,7 +17,6 @@ export class App extends Component {
         return (
             <div>
                 <BrowserRouter>
-                    <Header/>
                     <Fade>
                         <Route exact path='/' exact component={Home}/>
                         <Route exact path='/'  component={About}/>

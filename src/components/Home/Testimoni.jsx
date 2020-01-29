@@ -44,9 +44,9 @@ export class Testimoni extends Component {
                     </div>
                     <div className='col-lg-2'></div>
                     <div className='col-lg-8'>
-                        <Slider autoplay={200} duration={1000} nextButton={''} previousButton={''}>
+                        <Slider autoplay={1000}  nextButton={''} previousButton={''}>
                             {this.state.testimoni.map((item)=>(
-                                <div>
+                                <div key={item.id}>
                                         <blockquote className="blockquote text-center" >
                                     <h5>{`'${item.description}'`}</h5>
                                         <footer className="blockquote-footer">

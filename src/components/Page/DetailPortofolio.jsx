@@ -13,17 +13,32 @@ import {
     Button,
     CardGroup,
     Spinner,
-    Table,
 } from 'reactstrap'
 
 
-import foto from '../../image/gunung.jpg'
 import axios from '../../config/axios'
 export class DetailPortofolio extends Component {
     state={
         project : null,
         tech_project : null,
         foto_project : null
+    }
+    createMarkupDesc () {
+        return{
+            __html : `${this.state.project[0].desc_project}`
+        }
+    }
+    descHTML (){
+        return <div dangerouslySetInnerHTML={this.createMarkupDesc()} />
+    }
+
+    createMarkupProlog(){
+        return{
+            __html : `${this.state.project[0].prolog}`
+        }
+    }
+    prologHTML(){
+        return <div dangerouslySetInnerHTML={this.createMarkupProlog()} />
     }
 
     componentDidMount(){
@@ -48,7 +63,7 @@ export class DetailPortofolio extends Component {
         axios.get(`foto/project/${namaProject}`)
         .then((res)=>{
             this.setState({foto_project : res.data})
-            console.log(this.state.foto_project)
+            console.log(this.state.project[0])
         })
         .catch((err)=>{
             console.log(err)
@@ -70,7 +85,7 @@ export class DetailPortofolio extends Component {
                 </div>
             )
         }
-        let {nama_project,prolog, desc_project, alamat_github, alamat_web} = this.state.project[0]
+        let {nama_project,alamat_github, alamat_web} = this.state.project[0]
         return (
         <div>
 
@@ -82,7 +97,7 @@ export class DetailPortofolio extends Component {
                 <div className='row'>
                     <div className='col-lg-6'>
                         <Card className='my-auto' style={{width:'100%'}}>
-                            <Slider>
+                            <Slider autoplay={500}>
                                 {this.state.foto_project.map((val)=>{
                                     return(
                                         <CardImg top width="100%" height="50%" src={source + val.foto} alt="Card image cap" /> 
@@ -113,7 +128,7 @@ export class DetailPortofolio extends Component {
                                         <h1 className='tulisan-page-one'>{nama_project} </h1>
                                         </CardTitle>
                                         {/* PROLOG */}
-                                    <CardSubtitle>{prolog} </CardSubtitle>
+                                    <CardSubtitle>{this.prologHTML()} </CardSubtitle>
                                     
                                     </CardBody>
                                     <CardBody>
@@ -121,14 +136,14 @@ export class DetailPortofolio extends Component {
                                     <a href={alamat_github}>
                                     <Button  className='mx-1' color='warning' style={{width:'40%'}}>
                                         GitHub
-                                        <i class="fab fa-github pl-1"></i>
+                                        <i className="fab fa-github pl-1"></i>
                                     </Button>
                                     </a>
 
                                     <a href={alamat_web}>
                                     <Button className='mx-1' color='info' style={{width:'40%'}}>
                                         Web
-                                        <i class="fas fa-globe pl-1"></i>
+                                        <i className="fas fa-globe pl-1"></i>
                                     </Button>
                                     </a>
                                         </center>
@@ -142,7 +157,9 @@ export class DetailPortofolio extends Component {
                                         Project Description 
                                     </h3> 
                                 </CardTitle>
-                                <CardText> {desc_project} </CardText>
+                                <CardText> 
+                                {this.descHTML()}
+                                </CardText>
                             </CardBody>
                         </Card>
                     </div>

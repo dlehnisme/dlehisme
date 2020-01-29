@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Typewriter from 'typewriter-effect'
 import  Fade from 'react-reveal/Fade'
+import {Link} from 'react-router-dom'
+
 
 export class Home extends Component {
     render() {
@@ -23,7 +24,9 @@ export class Home extends Component {
                             </h1>
                             </Fade>
                             <Fade left big delay={1500}>
-                            <button className='btn btn-info mt-5 btn-big'>See Portofolio</button>
+                            <Link to='/about?filter=all'>
+                            <button className='btn btn-info mt-5 btn-big'>About Me</button>
+                            </Link>
                             </Fade>
                         </div>
                         <div className='col-lg-6 font-weight-bold'></div>

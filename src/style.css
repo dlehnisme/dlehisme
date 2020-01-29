@@ -41,6 +41,7 @@ hr.garis-testi{
 }
 .who-ami{
   font-weight: 1000;
+  text-shadow: grey 1px 1px;
 }
 .btn-big{
   width: 200px;
@@ -104,6 +105,11 @@ hr.garis-testi{
 }
 .btn-margin-minus{
   margin-top: -50%;
+}
+@media  (max-width : 769px) {
+  .btn-margin-minus{
+    margin-top: -100%;
+  }
 }
 
 /* BLOG */
